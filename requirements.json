@@ -1,0 +1,69 @@
+[
+    {
+        "LocationDetails": {
+            "prop": "City, Country"
+        },
+        "ForcastSummaries": {
+            "prop": [{"forcasts": {
+                "Day1": {
+                    "ForcastSummary": {
+                        "Date": "shortDay, date, shortMonth",
+                        "weatherType": "icon",
+                        "Temperature": "temperature(Celcius)",
+                        "details": "More details",
+                        "status": "unselected"
+                    }
+                    },
+                "Day2": {
+                    "ForcastSummary": {
+                        "Date": "shortDay, date, shortMonth",
+                        "weatherType": "icon",
+                        "Temperature": "temperature(Celcius)",
+                        "details": "More details",
+                        "status": "unselected"
+                    }
+                    },
+                    "Day3":  {
+                        "ForcastSummary": {
+                            "Date": "shortDay, date, shortMonth",
+                            "weatherType": "icon",
+                            "Temperature": "temperature(Celcius)",
+                            "details": "More details",
+                            "status": "unselected"
+                        }
+                        },
+                    "Day4":  {
+                        "ForcastSummary": {
+                            "Date": "shortDay, date, shortMonth",
+                            "weatherType": "icon",
+                            "Temperature": "temperature(Celcius)",
+                            "details": "More details",
+                            "status": "unselected"
+                        }
+                        },
+                    "Day5":  {
+                        "ForcastSummary": {
+                            "Prop1": "Date",
+                            "Prop2": "icon",
+                            "Prop3": "temperature(Celcius)",
+                            "Prop4": "More details",
+                            "status": "unselected"
+                        }
+                        }
+            }
+            }
+        ]
+        },
+        "ForcastDetails": {
+            "Prop1": "Date",
+            "Prop2": {
+                "Temperature": {
+                    "max temperature": "value", 
+                    "min temperature": "value"
+                }
+            },
+            "Prop3": "Humidity",
+            "Prop4": "Wind"
+    }
+    }
+]
