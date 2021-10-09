@@ -9,11 +9,11 @@ import ForecastSummaries from "./ForecastSummaries";
 // step 4 is to add the data from the props using PropTypes.
 // step 5 is to add the data into the component as a prop by stating it as a parameter
 const App = ({ location, forecasts }) => {
-return (
-  <div className="forecast">
-    <LocationDetails city={location.city} country={location.country} />
-    <ForecastSummaries forecasts={forecasts} />
-  </div>
+  return (
+    <div className="forecast">
+      <LocationDetails city={location.city} country={location.country} />
+      <ForecastSummaries forecasts={forecasts} />
+    </div>
   );
 };
 
@@ -37,4 +37,3 @@ App.propTypes = {
     country: PropTypes.string,
   }).isRequired,
 };
-

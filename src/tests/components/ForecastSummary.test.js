@@ -34,7 +34,7 @@ describe("ForecastSummary", () => {
             temperature={validProps.temperature}
             />
         );
-        expect(getByText(1111111)).toHaveClass("forecast-summary__date");
+        expect(getByText('Thu 4th Jan')).toHaveClass("forecast-summary__date");
         expect(getByText("Stub Description")).toHaveClass("forecast-summary__description");
         expect(getByTestId("forecast-icon")).toHaveClass("forecast-summary__icon");
         expect(getByText("22°C")).toHaveClass("forecast-summary__temperature");
