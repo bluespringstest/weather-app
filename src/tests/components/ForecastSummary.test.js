@@ -3,8 +3,9 @@ import { render } from "@testing-library/react";
 import ForecastSummary from "../../components/ForecastSummary";
 
 describe("ForecastSummary", () => {
+    // const date = new Date('Tuesday 2 April');
     const validProps = {
-        date: 11111111,
+        date: 1111111,
         description: "Stub Description",
         icon: "stubIcon",
         temperature: {
@@ -12,6 +13,7 @@ describe("ForecastSummary", () => {
             max: 22,
         },
     };
+    
     it("renders the objects correctly in the virtual DOM", () => {
         const { asFragment } = render(
             <ForecastSummary 
@@ -21,7 +23,7 @@ describe("ForecastSummary", () => {
             temperature={validProps.temperature}
             />
         );
-        expect(asFragment).toMatchSnapshot();
+        expect(asFragment()).toMatchSnapshot();
     });
     it("renders the correct values for the props", () => {
         const { getByText, getByTestId } = render(
@@ -32,7 +34,7 @@ describe("ForecastSummary", () => {
             temperature={validProps.temperature}
             />
         );
-        expect(getByText("11111111")).toHaveClass("forecast-summary__date");
+        expect(getByText(1111111)).toHaveClass("forecast-summary__date");
         expect(getByText("Stub Description")).toHaveClass("forecast-summary__description");
         expect(getByTestId("forecast-icon")).toHaveClass("forecast-summary__icon");
         expect(getByText("22°C")).toHaveClass("forecast-summary__temperature");

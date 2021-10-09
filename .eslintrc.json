@@ -27,6 +27,7 @@
         "quotes": [0],
         "react/jsx-props-no-spreading": [0],
         "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
-        "prettier/prettier": ["error", {"endOfLine": "auto"}]
+        "prettier/prettier": ["error", {"endOfLine": "auto"}],
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
     }
 }

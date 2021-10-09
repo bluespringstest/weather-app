@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ForecastSummary from "./ForecastSummary";
+// import "../styles/ForecastSummaries.css";
 
-const ForecastSummaries = ({ forecasts }) => (
+const ForecastSummaries = ({ forecasts }) => {
+return (
   <div className="forecast-summaries">
     {forecasts.map((forecast) => (
       <ForecastSummary
@@ -14,7 +16,10 @@ const ForecastSummaries = ({ forecasts }) => (
       />
     ))}
   </div>
-);
+  );
+};
+
+export default ForecastSummaries;
 
 ForecastSummaries.propTypes = {
   forecasts: PropTypes.arrayOf(
@@ -29,5 +34,3 @@ ForecastSummaries.propTypes = {
     })
   ).isRequired,
 };
-
-export default ForecastSummaries;
