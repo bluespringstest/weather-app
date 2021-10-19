@@ -3,16 +3,30 @@ import "../styles/App.css";
 import PropTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
+import { useState } from "react/cjs/react.development";
 
 // Step 2 is to import files into the app and render the components. They need to have return otherwise errors occur.
 // changing the component below from this: function App() to: const App = () => makes it into a component that renders components and their props.
 // step 4 is to add the data from the props using PropTypes.
 // step 5 is to add the data into the component as a prop by stating it as a parameter
 const App = ({ location, forecasts }) => {
+  //the items below are the default state and newly set set which activates only when prompted
+  const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
+  const selectedForecast = forecasts.find(
+    (forecast) => forecast.date === selectedDate
+  );
+  const handleForecastSelect = (date) => {
+    setSelectedDate(date);
+  };
   return (
     <div className="forecast">
       <LocationDetails city={location.city} country={location.country} />
-      <ForecastSummaries forecasts={forecasts} />
+      <ForecastSummaries 
+      forecasts={forecasts}
+      //below is the prop that is also a function
+      onForecastSelect={handleForecastSelect}
+      />
+      <ForecastDetails forecast={selectedForecast} />
     </div>
   );
 };

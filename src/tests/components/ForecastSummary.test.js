@@ -12,6 +12,7 @@ describe("ForecastSummary", () => {
             min: 12,
             max: 22,
         },
+        onSelect: jest.fn(),
     };
     
     it("renders the objects correctly in the virtual DOM", () => {
@@ -21,6 +22,7 @@ describe("ForecastSummary", () => {
             description={validProps.description}
             icon={validProps.icon}
             temperature={validProps.temperature}
+            onSelect={validProps.onSelect}
             />
         );
         expect(asFragment()).toMatchSnapshot();
@@ -32,6 +34,7 @@ describe("ForecastSummary", () => {
             description={validProps.description}
             icon={validProps.icon}
             temperature={validProps.temperature}
+            onSelect={validProps.onSelect}
             />
         );
         expect(getByText('Mon 1st Apr')).toHaveClass("forecast-summary__date");

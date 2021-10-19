@@ -12,6 +12,7 @@ describe("ForecastSummaries", () => {
                 max: 22,
                 min: 12,
             },
+
         },
         {
             date: 2222222,
@@ -23,6 +24,7 @@ describe("ForecastSummaries", () => {
             },
         },
     ];
+    const onForecastSelect = jest.fn()
 
     it("renders snapshot correctly", () => {
         const { asFragment } = render(<ForecastSummaries forecasts={ validProps } />);
